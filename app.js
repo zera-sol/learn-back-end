@@ -1,7 +1,8 @@
-const http = require('http');
-const server = http.createServer((req, res) =>{
- console.log(req)
- res.write("hello This is my firs web server")
- res.end()
+const express = require("express")
+
+const app = express();
+
+app.get("/bezaFikre", (req, res)=>{
+    res.send("Beza Fikre I love you! ")
 })
-server.listen(5000)
+app.listen(4900)
